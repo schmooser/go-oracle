@@ -1,0 +1,15 @@
+prefix=/usr/local/Oracle/instantclient_11_2
+exec_prefix=${prefix}
+libdir=${prefix}
+includedir=${prefix}/sdk/include
+
+glib_genmarshal=glib-genmarshal
+gobject_query=gobject-query
+glib_mkenums=glib-mkenums
+
+Name: oci8
+Description: Oracle database oci8 library
+Version: 11.2
+Libs: -L${libdir} -lclntsh
+Libs.private:
+Cflags: -I${includedir}
